@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="Pong.js"></script>
+		<script>
+		window.onload = function() {
+			var canvas = document.getElementById('pong');
+			var context = canvas.getContext('2d');
+			var pong = new Pong();
+			context.fillStyle = "white";
+			pong.draw(context);
+		};
+		setInterval(function() {
+			pong.move();
+			context.fillStyle = "rgba(0,0,0,0.1)";
+			context.fillRect(0,0,canvas.width,canvas.height);
+			context.fillStyle = "white";
+			pong.draw(context);
+		}, 7);
+		</script>
+	<style>
+		#pong {
+			background:black;
+		}
+	</style>
+	</head>
+	<body>
+		<canvas id="pong" width="400" height="200"></canvas>
+	</body>
+</html>
