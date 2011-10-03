@@ -1,0 +1,7 @@
+describe("The product of everything except", function() {
+	it("shouldReturnTheSameProductAsInput", function() {
+		var calculator = new Calculator();
+		var expectedResult = [1,2];
+		expect(pr
+	});
+});

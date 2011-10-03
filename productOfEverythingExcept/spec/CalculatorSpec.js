@@ -1,0 +1,39 @@
+describe("The product of everything except", function() {
+
+	var calculator;
+
+	beforeEach(function() {
+		calculator = new Calculator();
+	});
+
+	it("should return the same product as input", function() {
+		var expectedResult = new Array(1,2);
+		var input = new Array(1,2);
+		var index = new Array(1,0);
+		expect(calculator.product(input,index)).toEqual(expectedResult);
+
+	});
+
+	it("should return a list with the first input",function() {
+		var expectedResult = new Array(1,1);
+		var input = new Array(1,2);
+		var index = new Array(1,1);
+		expect(calculator.product(input,index)).toEqual(expectedResult);
+	});
+
+	it("should return a list with the three input",function() {
+		var expectedResult = new Array(8,6,6);
+		var input = new Array(2,3,4);
+		var index = new Array(1,2,2);
+		expect(calculator.product(input,index)).toEqual(expectedResult);
+	});
+
+
+	it("The product should work with four elements",function() {
+		var expectedResult = new Array(40,24,30,60);
+		var input = new Array(2,3,4,5);
+		var index = new Array(1,3,2,0);
+		expect(calculator.product(input,index)).toEqual(expectedResult);
+	});
+
+});
